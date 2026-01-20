@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Dashboard</title>
+    <link rel="icon" href="img/duck.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+       <div class="nav">
+      <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+          <img class="logo" src="img/duck.png" alt="logo-duck" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                Dark offcanvas
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-start align-items-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3 justify-content-start" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-lg">
+            <div class="title-page">
+                <h1>Catalogo libri</h1>
+            <button type="button" class="btn btn-primary">
+              Aggiungi libro
+            </button>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Titolo</th>
+                  <th scope="col">Stato</th>
+                  <th class="d-none d-md-table-cell">Data prestito</th>
+                  <th scope="col" id="azioni">Azioni</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I pilastri della terra</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>I promessi sposi</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il signore degli anelli</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-warning"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      In prestito
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    18/10/2023
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Harry Potter e la pietra filosofale</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il codice Da Vinci</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Non disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Shining</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>La divina commedia</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-warning"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      In prestito
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    21/09/2023
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il trono di spade</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il mondo di Sofia</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Non disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Le cronache di Narnia: il leone, la strega e l'armadio
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-warning"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      In prestito
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    25/07/2023
+                  </td>
+                 <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il piccolo principe</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>La storia infinita</td>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                      style="
+                        --bs-btn-padding-y: 0.25rem;
+                        --bs-btn-padding-x: 0.5rem;
+                        --bs-btn-font-size: 0.85rem;
+                      "
+                    >
+                      Disponibile
+                    </button>
+                  </td>
+                  <td class="d-none d-md-table-cell">
+                    -
+                  </td>
+                  <td>
+                    <div class="btn-pencil-trash">
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-light border text-body-secondary"> <i class="bi bi-trash3-fill"></i></button>
+                      </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+                        <div class="col-lg-4">
+                        <div class="card mb-4" style="width: 100%">
+                          <div class="card-header fs-3">Todo</div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <div class="card mt-2 mb-2" style="width: 100%;">
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item"><div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+  <label class="form-check-label" for="checkDefault">
+    Chiamare segreteria
+  </label>
+</div></li>
+                                      <li class="list-group-item"><div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+  <label class="form-check-label" for="checkDefault">
+    Mandare avvisi prestiti scaduti
+  </label>
+</div></li>
+                                      <li class="list-group-item"><div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+  <label class="form-check-label" for="checkDefault">
+    Ordinare nuovi libri
+  </label>
+</div></li>
+                                    </ul>
+                                  </div>
+                            </li>
+                          </ul>
+                        </div>
+                      <div class="card mb-4" style="width: 100%">
+                        <div class="card-header fs-3">F.A.Q.</div>
+                        <ul class="list-group list-group-flush">
+                          <div class="accordion accordion-flush m-3" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Come aggiungere un nuovo libro?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      Come posso accedere all'anagrafica utenti?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Posso usare questa dashboard da mobile?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                  </div>
+                </div>
+              </div>
+                        </ul>
+                      </div>
+                    </div>
+</div>
+      
+    </main>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

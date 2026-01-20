@@ -1,0 +1,55 @@
+.nav {
+   height: 100px; 
+   width: 100%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+h1 {
+    text-align: start;
+    font-weight: 300;
+}
+
+.title-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+#azioni {
+    text-align: center;
+} 
+
+.btn-pencil-trash {
+    display: flex;
+}
+
+/* #data-prestito {
+    display: none;
+} */
+
+/* @media  screen and (min-width: 768px) {
+    main {
+        padding: 0 10px;
+    }
+
+    #data-prestito {
+        display: contents;
+    }
+}
+
+@media  screen and (max-width: 960px) {
+    main {
+        padding: 0 50px;
+    }
+
+} */
+
+
+
+
+    
+
